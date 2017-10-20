@@ -1,6 +1,6 @@
 FROM postgres:9.6
 
-RUN apt-get update && apt-get -yq install daemontools  pv python3-pip lzop && python3 -m pip install wal-e[swift] \
+RUN apt-get update && apt-get -yq install sudo daemontools  pv python3-pip lzop && python3 -m pip install wal-e[swift] \
     && apt-get autoclean
 
 RUN ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
