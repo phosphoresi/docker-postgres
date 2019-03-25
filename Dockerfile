@@ -1,4 +1,4 @@
-FROM postgres:9.6.9
+FROM postgres:9.6.12
 
 RUN apt-get update && apt-get -yq install sudo daemontools  pv python3-pip lzop && python3 -m pip install wal-e[swift] \
     && apt-get autoclean
