@@ -1,4 +1,4 @@
-FROM postgres:10.7
+FROM postgres:10.10
 
 RUN apt-get update && apt-get -yq install sudo daemontools  pv python3-pip lzop && python3 -m pip install wal-e[swift] \
     && apt-get autoclean
