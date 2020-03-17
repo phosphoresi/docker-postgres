@@ -1,6 +1,6 @@
 	FROM postgres:11
 
-RUN apt-get update && apt-get -yq install curl sudo daemontools  pv python3-pip lzop && python3 -m pip install wal-e[swift] \
+RUN apt-get update && apt-get -yq install curl sudo daemontools  pv python2-pip lzop && python2 -m pip install wal-e[swift] \
     && apt-get autoclean
 
 ENV WALG_VERSION="v0.2.14"
